@@ -5,13 +5,12 @@ class Solution {
     var numberValue;
     if (x <= 0) return false;
     do {
-      abc = x / 10; // 1,4 / 0,1
-      numberValue = abc.floor(); // 1 / 0
+      abc = x / 10;
+      numberValue = abc.floor();
       print(numberValue);
-      final floatValue = abc - numberValue; // ,4 / ,1
-      num.add((double.parse((floatValue).toStringAsFixed(1)) *
-          10)); // num[0] = 4.0 / num[1] = 1.0
-      x = numberValue; // abc = 1
+      final floatValue = abc - numberValue;
+      num.add((double.parse((floatValue).toStringAsFixed(1)) * 10));
+      x = numberValue;
     } while (numberValue != 0);
     print(num);
     int j = num.length - 1;
